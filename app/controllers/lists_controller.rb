@@ -19,9 +19,15 @@ class ListsController < ApplicationController
     else
       render json: list.errors.to_json, status: :unprocessable_entity
     end
-
-
   end
 
+  def update
+    list = List.find(params[:id])
 
+    if list.update(title: params[:title])
+      render json: list.to_json, status: 200
+    else
+      render json: list.errors.to_json, status: :unprocessable_entity
+    end
+  end
 end
