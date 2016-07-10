@@ -12,6 +12,13 @@ class ListsController < ApplicationController
   end
 
   def create
+    list = List.new(title: params[:title])
+
+    if list.save
+      render json: list.to_json, status: 200
+    else
+      render json: list.errors.to_json, status: :unprocessable_entity
+    end
   end
 
 
