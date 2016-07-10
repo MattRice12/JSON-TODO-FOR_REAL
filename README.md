@@ -1,24 +1,55 @@
-# README
+#JSON TODO_APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Steps
+###1) Created new rails project
+###2) Created Tasks Table w/
+	a) body
+	b) list_id
+	c) complete
+###3) Created Lists Table w/
+	a) title
+###4) Migrated tables to DB
+###5) Updated seeds file w/
+	a) Fake lists
+	b) Fake tasks
+###6) Created full CRUD actions for List in lists_controller
+###7) Created full CRUD actions for Tasks in tasks_controller
+###8) Updated Routes
+###9) Set up validations for lists and tasks
 
-Things you may want to cover:
+#___________________
 
-* Ruby version
+## Features
+#Lists:
+###1) Can see all lists 
+GET >
+http://localhost:3000/lists
+###2) Can see individual list
+GET >
+http://localhost:3000/lists/1
+###3) Can create new list
+POST > 
+http://localhost:3000/lists/6
+###4) Can update existing list
+PUT > 
+http://localhost:3000/lists/1
+###5) Can delete individual list
+DELETE > 
+http://localhost:3000/lists/1
+#___________________
+###6) Can see all tasks
+GET >
+http://localhost:3000/tasks
+###7) Can see individual task
+GET >
+http://localhost:3000/tasks/1
+###8) Can create new task
+POST >
+http://localhost:3000/tasks/6
+###9) Can update existing task
+PUT >
+http://localhost:3000/tasks/1
+###10) Can delete individual task
+DELETE >
+http://localhost:3000/tasks/1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
