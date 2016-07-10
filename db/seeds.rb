@@ -16,6 +16,5 @@
       list_id:    list.id,
       completed:  rand(0..1)
       )
-    end
   end
 end
