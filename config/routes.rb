@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   put '/tasks/:id', to: 'tasks#update'
   put '/lists/:id', to: 'lists#update'
 
+  delete '/tasks/:id', to: 'tasks#destroy'
+  delete '/lists/:id', to: 'lists#destroy'
+
   get '/tasks', to: 'tasks#index'
   get '/lists', to: 'lists#index'
 end

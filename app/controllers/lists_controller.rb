@@ -30,4 +30,6 @@ class ListsController < ApplicationController
       render json: list.errors.to_json, status: :unprocessable_entity
     end
   end
+
+
 end

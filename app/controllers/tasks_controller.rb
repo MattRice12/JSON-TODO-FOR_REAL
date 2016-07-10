@@ -36,4 +36,13 @@ class TasksController < ApplicationController
       render json: task.errors.to_json, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    if Task.exists?(params[:id])
+      Task.destroy(params[:id])
+      render json: { message: "Task destroyed." }, status: 200
+    else
+      render json: { message: "Task not found." }, status: 404
+    end
+  end
 end
