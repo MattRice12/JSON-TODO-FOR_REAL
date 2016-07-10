@@ -12,14 +12,28 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(body: params[:body], list_id: params[:id], completed: params[:completed])
+    task = Task.new(body: params[:body],
+                    list_id: params[:id],
+                    completed: params[:completed]
+                    )
 
     if task.save
       render json: task.to_json, status: 200
     else
       render json: task.errors.to_json, status: :unprocessable_entity
     end
-
   end
 
+  def update
+    task = Task.find(params[:id])
+
+    if task.update(body: params[:body],
+                   list_id: params[:id],
+                   completed: params[:completed]
+                   )
+      render json: task.to_json, status: 200
+    else
+      render json: task.errors.to_json, status: :unprocessable_entity
+    end
+  end
 end

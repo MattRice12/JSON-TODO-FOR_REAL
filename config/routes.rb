@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post '/tasks/:id', to: 'tasks#create'
   post '/lists/:id', to: 'lists#create'
 
+  put '/tasks/:id', to: 'tasks#update'
+  put '/lists/:id', to: 'lists#update'
+
   get '/tasks', to: 'tasks#index'
   get '/lists', to: 'lists#index'
 end
