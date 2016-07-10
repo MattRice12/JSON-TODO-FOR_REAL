@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+5.times do
+  list = List.create(
+    title:        Faker::Name.title
+    )
+  2.times do
+    Task.create(
+      body:       Faker::Lorem.paragraph,
+      list_id:    list.id,
+      completed:  rand(0..1)
+      )
+    end
+  end
+end
