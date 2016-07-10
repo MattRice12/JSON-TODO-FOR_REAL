@@ -10,4 +10,16 @@ class TasksController < ApplicationController
       render json: { message: "Task not found." }, status: 404
     end
   end
+
+  def create
+    task = Task.new(body: params[:body], list_id: params[:id], completed: params[:completed])
+
+    if task.save
+      render json: task.to_json, status: 200
+    else
+      render json: task.errors.to_json, status: :unprocessable_entity
+    end
+
+  end
+
 end

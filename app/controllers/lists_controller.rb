@@ -10,4 +10,9 @@ class ListsController < ApplicationController
       render json: { message: "List not found." }, status: 404
     end
   end
+
+  def create
+  end
+
+
 end

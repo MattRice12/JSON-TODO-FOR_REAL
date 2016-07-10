@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :List
+  belongs_to :list
 
   validates :body, length: { minimum: 5, maximum: 1000 }
   validates :list_id, presence: true
