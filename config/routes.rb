@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  get '/tasks/complete', to: 'tasks#complete'
+  get '/tasks/incomplete', to: 'tasks#incomplete'
+
   get '/tasks/:id', to: 'tasks#show'
   get '/lists/:id', to: 'lists#show'
 
