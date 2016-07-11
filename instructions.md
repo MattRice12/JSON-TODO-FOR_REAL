@@ -1,5 +1,3 @@
-I should be able to go / and receive a JSON response of all the tasks
-
 I should be able to request only the completed tasks through a non-CRUD route. (That means you should use your own name for that route. For example /tasks/completed)
 
 I should be able to request only the incomplete tasks through a non-CRUD route.

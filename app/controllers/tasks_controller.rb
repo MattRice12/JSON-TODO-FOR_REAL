@@ -4,8 +4,16 @@ class TasksController < ApplicationController
   end
 
   def show
-    if Task.exists?(params[:id])
-      render json: Task.find(params[:id]), status: 200
+    if Task.exists?
+      if params[:id] == "complete"
+        task_com = Task.where(completed: true)
+        render json: task_com.to_json, status: 200
+      elsif params[:id] == "incomplete"
+        task_com = Task.where(completed: false)
+        render json: task_com.to_json, status: 200
+      else
+        render json: Task.find(params[:id]), status: 200
+      end
     else
       render json: { message: "Task not found." }, status: 404
     end
