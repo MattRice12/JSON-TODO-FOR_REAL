@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   delete '/lists/:id', to: 'lists#destroy'
 
   get '/tasks', to: 'tasks#index'
+  get '/', to: 'tasks#index'
   get '/lists', to: 'lists#index'
+
 end
