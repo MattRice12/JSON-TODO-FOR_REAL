@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160710174556) do
+ActiveRecord::Schema.define(version: 20160711050139) do
 
   create_table "lists", force: :cascade do |t|
     t.string "title", null: false
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string  "body", null: false
+    t.string  "body",                      null: false
     t.integer "list_id"
     t.boolean "completed", default: false
     t.index ["list_id"], name: "index_tasks_on_list_id"
