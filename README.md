@@ -21,28 +21,36 @@
 
 ## Features
 #Lists:
-###1) Can see all lists 
+###1) Can see all lists
 GET >
 http://localhost:3000/lists
 ###2) Can see individual list
 GET >
 http://localhost:3000/lists/1
 ###3) Can create new list
-POST > 
+POST >
 http://localhost:3000/lists/6
 ###4) Can update existing list
-PUT > 
+PUT >
 http://localhost:3000/lists/1
 ###5) Can delete individual list
-DELETE > 
+DELETE >
 http://localhost:3000/lists/1
 #___________________
 ###6) Can see all tasks
 GET >
+http://localhost:3000/
+GET >
 http://localhost:3000/tasks
-###7) Can see individual task
+###7.1) Can see individual task
 GET >
 http://localhost:3000/tasks/1
+###7.2) Can see only completed tasks
+GET >
+http://localhost:3000/tasks/complete
+###7.3) Can see only incomplete tasks
+GET >
+http://localhost:3000/tasks/incomplete
 ###8) Can create new task
 POST >
 http://localhost:3000/tasks/6
@@ -52,4 +60,3 @@ http://localhost:3000/tasks/1
 ###10) Can delete individual task
 DELETE >
 http://localhost:3000/tasks/1
-
